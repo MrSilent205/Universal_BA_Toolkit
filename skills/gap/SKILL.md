@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /gap — Phân tích Lỗ hổng Nghiệp vụ (Gap Analysis) 🌟 [CORE WORKFLOW]
+# /gap — Phân tích Lỗ hổng Nghiệp vụ (Gap Analysis) [CORE WORKFLOW]
 
 Thực hiện quy trình soi chiếu phản biện độc lập đối với hồ sơ tài liệu tính năng (SRS, Wireframe, Use Case, API Specs), phát hiện các kịch bản bị bỏ sót, các điểm nghẽn logic và các giả định ngầm chưa được kiểm chứng trước khi đội ngũ lập trình bắt đầu code.
 

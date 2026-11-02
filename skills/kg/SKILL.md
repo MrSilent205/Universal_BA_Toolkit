@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /kg — Đồ thị Tri thức Toàn bộ Tài liệu (Knowledge Graph) 🌟 [CORE WORKFLOW]
+# /kg — Đồ thị Tri thức Toàn bộ Tài liệu (Knowledge Graph) [CORE WORKFLOW]
 
 Quét tự động toàn bộ cây tài liệu của dự án, phân tích các trường YAML Frontmatter theo Rule 18 để tái hiện mạng lưới quan hệ đa chiều (Knowledge Graph) giữa các tài liệu, yêu cầu chức năng (`FR`), quy tắc nghiệp vụ (`BR`), thực thể dữ liệu (`ERD`) và sơ đồ hệ thống.
 
@@ -51,10 +51,14 @@ Quét tự động toàn bộ cây tài liệu của dự án, phân tích các 
      ```
 3. **Thiết lập Danh mục Cạnh Liên kết (Edges & Relationships Extraction)**:
    - Phân tích các mối quan hệ đa chiều:
-     - Quan hệ phụ thuộc: `depends_on` $ightarrow$ Cạnh `DEPENDS_ON`.
-     - Quan hệ sơ đồ minh họa: `related_diagrams` $ightarrow$ Cạnh `ILLUSTRATED_BY`.
-     - Quan hệ chi phối: `BR` áp dụng vào `FR` $ightarrow$ Cạnh `ENFORCES`.
-     - Quan hệ kiểm thử: `TC` kiểm tra `FR` $ightarrow$ Cạnh `VERIFIES`.
+     - Quan hệ phụ thuộc: `depends_on` $
+ightarrow$ Cạnh `DEPENDS_ON`.
+     - Quan hệ sơ đồ minh họa: `related_diagrams` $
+ightarrow$ Cạnh `ILLUSTRATED_BY`.
+     - Quan hệ chi phối: `BR` áp dụng vào `FR` $
+ightarrow$ Cạnh `ENFORCES`.
+     - Quan hệ kiểm thử: `TC` kiểm tra `FR` $
+ightarrow$ Cạnh `VERIFIES`.
 4. **Xuất bản Dữ liệu Đồ thị Chuẩn Quốc tế (Cytoscape / Graphology JSON)**:
    - Xuất file `docs/knowledge-graph.json` cấu trúc chuẩn để dễ dàng import vào các công cụ trực quan hóa đồ thị như Cytoscape, Gephi hoặc Neo4j:
      ```json

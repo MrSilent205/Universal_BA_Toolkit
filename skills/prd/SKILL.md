@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /prd — Đặc tả Yêu cầu Sản phẩm (Product Requirements Document) 🌟 [CORE WORKFLOW]
+# /prd — Đặc tả Yêu cầu Sản phẩm (Product Requirements Document) [CORE WORKFLOW]
 
 Khởi tạo tài liệu PRD định hình tầm nhìn sản phẩm, phân tích chân dung người dùng, xác định mục tiêu kinh doanh đo lường được và phân rã danh mục tính năng chiến lược trước khi bước vào chi tiết kỹ thuật.
 

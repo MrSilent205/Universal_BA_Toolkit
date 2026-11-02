@@ -10,16 +10,16 @@ Theo Alistair Cockburn, mỗi Use Case phải được xác định rõ cấp đ
 
 | Cấp Độ Mục Tiêu | Biểu Tượng | Định Nghĩa Nghiệp Vụ | Ví Dụ Điển Hình |
 | :--- | :---: | :--- | :--- |
-| **Cấp Tóm Tắt (Summary Level)** | ☁️ *Đám mây / Mây trắng* | Bao quát chuỗi hoạt động kinh doanh kéo dài nhiều ngày hoặc nhiều phòng ban. | *Quản lý vòng đời đơn hàng từ đặt hàng đến đối soát kế toán.* |
-| **Cấp Mục Tiêu Người Dùng (User-Goal Level)** | 🌊 *Mặt biển / Sóng biển* | Thao tác trọn vẹn của 1 tác nhân tại 1 phiên làm việc để đạt 1 mục tiêu cụ thể. (**Cấp độ khuyến nghị chuẩn cho BA**) | *Khách hàng thanh toán giỏ hàng trực tuyến.*<br>*Nhân viên kho duyệt phiếu xuất kho.* |
-| **Cấp Hàm Con (Subfunction Level)** | 🐟 *Dưới nước / Đáy biển* | Thao tác kỹ thuật bổ trợ được tái sử dụng bởi nhiều Use Case cấp trên. | *Xác thực mã OTP SMS.*<br>*Tải file hóa đơn điện tử PDF.* |
+| **Cấp Tóm Tắt (Summary Level)** | *Summary Level (Cấp Tóm Tắt)* | Bao quát chuỗi hoạt động kinh doanh kéo dài nhiều ngày hoặc nhiều phòng ban. | *Quản lý vòng đời đơn hàng từ đặt hàng đến đối soát kế toán.* |
+| **Cấp Mục Tiêu Người Dùng (User-Goal Level)** | *User-Goal Level (Cấp Mục Tiêu Người Dùng)* | Thao tác trọn vẹn của 1 tác nhân tại 1 phiên làm việc để đạt 1 mục tiêu cụ thể. (**Cấp độ khuyến nghị chuẩn cho BA**) | *Khách hàng thanh toán giỏ hàng trực tuyến.*<br>*Nhân viên kho duyệt phiếu xuất kho.* |
+| **Cấp Hàm Con (Subfunction Level)** | *Subfunction Level (Cấp Hàm Con)* | Thao tác kỹ thuật bổ trợ được tái sử dụng bởi nhiều Use Case cấp trên. | *Xác thực mã OTP SMS.*<br>*Tải file hóa đơn điện tử PDF.* |
 
 ---
 
 ## 2. Khung Cấu Trúc 12 Thành Phần Bắt Buộc Của Use Case Chuẩn Cockburn
 
 1. **Mã Use Case & Tên:** `UC-[MODULE]-[NUM]: <Động từ> + <Bổ ngữ>` (VD: `UC-ORD-01: Đặt Mua Hàng Trực Tuyến`).
-2. **Cấp độ (Goal Level):** `🌊 User-Goal Level` (Mục tiêu người dùng).
+2. **Cấp độ (Goal Level):** `User-Goal Level` (Mục tiêu người dùng).
 3. **Tác nhân chính (Primary Actor):** Vai trò khởi xướng Use Case (VD: Khách hàng mua sắm).
 4. **Các bên liên quan & Quyền lợi (Stakeholders & Interests):** Ai quan tâm đến kết quả và mong muốn điều gì.
 5. **Tiền điều kiện (Preconditions):** Điều kiện bắt buộc phải đúng trước khi Use Case bắt đầu (VD: Người dùng đã đăng nhập, giỏ hàng > 0).
@@ -28,7 +28,8 @@ Theo Alistair Cockburn, mỗi Use Case phải được xác định rõ cấp đ
 8. **Kích hoạt (Trigger):** Sự kiện làm bắt đầu Use Case (VD: Khách hàng nhấn nút 'Tiến hành đặt hàng').
 9. **Kịch bản chính / Luồng hạnh phúc (Main Success Scenario - Happy Path):**
    - Đánh số bước tuần tự: 1, 2, 3, 4, 5...
-   - Mỗi bước ghi rõ: `[Tác nhân] làm gì` $ightarrow$ `[Hệ thống] phản hồi/xử lý gì`.
+   - Mỗi bước ghi rõ: `[Tác nhân] làm gì` $
+ightarrow$ `[Hệ thống] phản hồi/xử lý gì`.
 10. **Các luồng ngoại lệ & Mở rộng (Extensions / Alternative Flows):**
     - Đánh số theo bước phát sinh: `3a.`, `3b.`, `4a.1.`
     - Mô tả điều kiện nhánh rẽ và cách hệ thống xử lý hoặc kết thúc Use Case.

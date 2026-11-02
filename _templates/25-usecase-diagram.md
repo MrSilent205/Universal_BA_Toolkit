@@ -21,9 +21,9 @@ last_updated: [YYYY-MM-DD]
 ```mermaid
 flowchart LR
     subgraph Actors["Tác nhân ngoài"]
-        Cust["👤 Khách hàng"]
-        Admin["👨‍💼 Quản trị viên"]
-        VNPay["🏦 Cổng VNPay"]
+        Cust["Khách hàng"]
+        Admin["Quản trị viên"]
+        VNPay["Cổng VNPay"]
     end
 
     subgraph SystemBoundary["Hệ thống Thương Mại Điện Tử (System Boundary)"]

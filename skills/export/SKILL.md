@@ -58,7 +58,11 @@ Thu thập, sắp xếp thứ tự và đóng gói toàn bộ các tài liệu p
    - Lưu vào `docs/releases/{feature}-v{version}-deliverable.md`.
 
 ## Tiêu chí Nghiệm thu (Quality Checklist)
-- [ ] Bộ tài liệu gộp đầy đủ các thành phần từ PRD $ightarrow$ SRS $ightarrow$ Diagrams $ightarrow$ Stories $ightarrow$ Test Cases.
+- [ ] Bộ tài liệu gộp đầy đủ các thành phần từ PRD $
+ightarrow$ SRS $
+ightarrow$ Diagrams $
+ightarrow$ Stories $
+ightarrow$ Test Cases.
 - [ ] Có trang bìa chuyên nghiệp, bảng Revision History và Mục lục tổng hợp.
 - [ ] Toàn bộ các đường link hình ảnh và sơ đồ hoạt động hoàn hảo, không bị đứt gãy.
 - [ ] Văn phong nhất quán xuyên suốt tài liệu từ đầu đến cuối.

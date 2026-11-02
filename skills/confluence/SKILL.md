@@ -43,9 +43,12 @@ Chuyển đổi toàn bộ hồ sơ tài liệu đặc tả Markdown trong dự 
      - Trang Con 4: `4. Backlog User Stories & Acceptance Criteria`
      - Trang Con 5: `5. Hồ sơ Kiểm thử QA & Ma trận Lỗi`
 2. **Chuyển đổi Khối Cảnh báo sang Định dạng Confluence Callouts**:
-   - `> [!NOTE]` $ightarrow$ Macro `{info:title=Ghi chú Nghiệp vụ}`.
-   - `> [!WARNING]` $ightarrow$ Macro `{warning:title=Cảnh báo Quan trọng}`.
-   - `> [!IMPORTANT]` $ightarrow$ Macro `{panel:title=Ràng buộc Bắt buộc}`.
+   - `> [!NOTE]` $
+ightarrow$ Macro `{info:title=Ghi chú Nghiệp vụ}`.
+   - `> [!WARNING]` $
+ightarrow$ Macro `{warning:title=Cảnh báo Quan trọng}`.
+   - `> [!IMPORTANT]` $
+ightarrow$ Macro `{panel:title=Ràng buộc Bắt buộc}`.
 3. **Bổ sung Confluence Macros Tự động**:
    - Đầu mỗi trang: Bổ sung Macro `{toc:maxLevel=3}` (Table of Contents).
    - Phần đầu trang: Bổ sung Macro `{status:colour=Green|title=APPROVED}` hoặc `{status:colour=Yellow|title=IN REVIEW}`.

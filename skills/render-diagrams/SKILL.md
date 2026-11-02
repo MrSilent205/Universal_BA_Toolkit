@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /render-diagrams — Kết xuất Sơ đồ Thiết kế Trực quan (Diagram Design) 🌟 [CORE WORKFLOW]
+# /render-diagrams — Kết xuất Sơ đồ Thiết kế Trực quan (Diagram Design) [CORE WORKFLOW]
 
 Tự động quét các tệp tài liệu Markdown chứa khối Mermaid (`sequenceDiagram`, `stateDiagram-v2`, `flowchart`, `erDiagram`), phân tích cú pháp AST và xuất bản thành các file visual **HTML + SVG độc lập**, loại bỏ nhược điểm phải mất công render hoặc convert thủ công.
 

@@ -46,7 +46,7 @@ Quét và tổng hợp toàn bộ các tài liệu trong thư mục `docs/`, tí
    - **Tỷ lệ đã có Sơ đồ Luồng (Diagram Coverage)**: Tỷ lệ các luồng chính có sơ đồ Sequence / Activity.
 3. **Lập Bảng Ma trận Theo dõi Trạng thái Tính năng (Feature Health Matrix)**:
    - Bảng tổng hợp: `Mã FR` | `Tên Yêu cầu` | `Độ ưu tiên` | `PRD` | `SRS` | `Diagram` | `Wireframe` | `User Story` | `Test Case` | `Trạng thái Hoàn thiện`.
-   - Sử dụng các biểu tượng trực quan: `✅ Hoàn thành`, `🟡 Đang làm`, `❌ Chưa có`.
+   - Sử dụng các biểu tượng trực quan: `[Done] Hoàn thành`, `[In Progress] Đang làm`, `[Pending] Chưa có`.
 4. **Lập Bảng Điểm nóng & Rủi ro Tồn đọng (Blockers & Risks Registry)**:
    - Liệt kê các rủi ro kỹ thuật chưa có lời giải (ví dụ: Chờ API Sandbox từ đối tác ngân hàng; Chưa có phương án mã hóa thẻ đạt chuẩn PCI-DSS).
    - Phân cấp mức độ ảnh hưởng: Đỏ (Blocker nghiêm trọng) / Vàng (Cảnh báo) / Xanh (Ổn định).

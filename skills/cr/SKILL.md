@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /cr — Quản lý Yêu cầu Thay đổi & Phân tích Tác động (Change Request) 🌟 [CORE WORKFLOW]
+# /cr — Quản lý Yêu cầu Thay đổi & Phân tích Tác động (Change Request) [CORE WORKFLOW]
 
 Quản lý và kiểm soát toàn diện các yêu cầu thay đổi nghiệp vụ (Change Requests) phát sinh giữa chừng từ phía Khách hàng hoặc Product Owner, thực hiện phân tích tác động đa chiều (Impact Analysis) trước khi quyết định điều chỉnh tài liệu hoặc mã nguồn.
 
@@ -62,7 +62,8 @@ Quản lý và kiểm soát toàn diện các yêu cầu thay đổi nghiệp v�
      - `REJECTED`: Từ chối vì rủi ro kỹ thuật vượt quá lợi ích mang lại.
 5. **Ghi tệp & Đồng bộ Tài liệu**:
    - Lưu báo cáo vào `docs/{feature}/cr/CR-{MODULE}-{SEQ}.md`.
-   - Nếu được APPROVED $ightarrow$ Cập nhật tài liệu SRS chính thức, nâng version SemVer theo Rule 19.
+   - Nếu được APPROVED $
+ightarrow$ Cập nhật tài liệu SRS chính thức, nâng version SemVer theo Rule 19.
 
 ## Tiêu chí Nghiệm thu (Quality Checklist)
 - [ ] Gán mã định danh duy nhất `CR-[MODULE]-[SEQ]` theo Rule 15.

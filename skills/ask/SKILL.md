@@ -46,7 +46,8 @@ metadata:
      2. **Logic & Quy tắc Chi phối (Business Rules & Conditions)**: Trích dẫn rõ ràng nguyên văn mệnh đề `WHEN ... THEN ... UNLESS ...` của mã `BR-xxx`.
      3. **Nguồn Trích dẫn Xác thực (Authoritative Citations)**: Đường dẫn file tài liệu cụ thể và số dòng (ví dụ: `docs/checkout/srs/spec.md#L45-L60`).
 4. **Cảnh báo Điểm Mù (Ambiguity / Gap Warning)**:
-   - Nếu câu hỏi rơi vào trường hợp tài liệu CHƯA QUY ĐỊNH $ightarrow$ Thẳng thắn thông báo: "Trường hợp này chưa có quy tắc đặc tả trong hệ thống", đồng thời gợi ý kích hoạt lệnh `/gap` hoặc `/cr` để bổ sung.
+   - Nếu câu hỏi rơi vào trường hợp tài liệu CHƯA QUY ĐỊNH $
+ightarrow$ Thẳng thắn thông báo: "Trường hợp này chưa có quy tắc đặc tả trong hệ thống", đồng thời gợi ý kích hoạt lệnh `/gap` hoặc `/cr` để bổ sung.
 
 ## Tiêu chí Nghiệm thu (Quality Checklist)
 - [ ] Câu trả lời trực diện, chính xác, không vòng vo hay suy diễn ngoài tài liệu.

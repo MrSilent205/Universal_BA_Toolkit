@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /test-cases — Bộ Đặc tả Test Cases Chi tiết (Executable Test Suite) 🌟 [CORE WORKFLOW]
+# /test-cases — Bộ Đặc tả Test Cases Chi tiết (Executable Test Suite) [CORE WORKFLOW]
 
 Xây dựng bộ kịch bản kiểm thử chi tiết từng bước (Step-by-Step Test Cases), cung cấp đầy đủ dữ liệu thử nghiệm cụ thể, điều kiện tiên quyết và kết quả mong đợi có thể thực thi ngay lập tức bởi Manual Testers hoặc làm đầu vào lập trình kiểm thử tự động.
 
@@ -58,7 +58,10 @@ Xây dựng bộ kịch bản kiểm thử chi tiết từng bước (Step-by-St
    - **Negative Tests (Error Path)**: Cố tình nhập sai dữ liệu, vi phạm quy tắc `BR-xxx` để kiểm chứng mã lỗi `ERR-xxx`.
    - **Boundary Tests (Giới hạn biên)**: Kiểm thử trường rỗng, chuỗi ký tự max độ dài, giá trị tiền tệ 0đ và mức tối đa.
 4. **Xây dựng Bảng Ma trận Truy vết Yêu cầu (RTM Table)**:
-   - Bổ sung bảng RTM ở cuối file đối chiếu 100% `FR-ID` $ightarrow$ `US-ID` $ightarrow$ `AC-ID` $ightarrow$ `TC-ID` theo Rule 14.
+   - Bổ sung bảng RTM ở cuối file đối chiếu 100% `FR-ID` $
+ightarrow$ `US-ID` $
+ightarrow$ `AC-ID` $
+ightarrow$ `TC-ID` theo Rule 14.
 5. **Ghi tệp**:
    - Sử dụng template `_templates/43-test-cases.md` và lưu vào `docs/{feature}/test/test-cases.md`.
 
@@ -66,5 +69,7 @@ Xây dựng bộ kịch bản kiểm thử chi tiết từng bước (Step-by-St
 - [ ] 100% Test Cases có mã định danh `TC-[MODULE]-[FEATURE]-[SEQ]` chuẩn mực.
 - [ ] Từng bước thực hiện (Steps) và Dữ liệu thử nghiệm (Test Data) cụ thể, không nói chung chung "nhập dữ liệu hợp lệ".
 - [ ] Kết quả mong đợi (Expected Results) đo lường được, có ghi rõ mã lỗi `ERR-` cho các ca negative.
-- [ ] Có bảng Ma trận Truy vết (RTM) đối chiếu từ FR $ightarrow$ Story $ightarrow$ Test Case theo Rule 14.
+- [ ] Có bảng Ma trận Truy vết (RTM) đối chiếu từ FR $
+ightarrow$ Story $
+ightarrow$ Test Case theo Rule 14.
 - [ ] Phân loại rõ ràng Severity (Blocker/Critical/Major) và Priority (P0/P1/P2).

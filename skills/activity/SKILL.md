@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /activity — Sơ đồ Hoạt động Nghiệp vụ (Activity Diagram) 🌟 [CORE WORKFLOW]
+# /activity — Sơ đồ Hoạt động Nghiệp vụ (Activity Diagram) [CORE WORKFLOW]
 
 Mô hình hóa các bước thực thi công việc và dòng chảy điều khiển (Control Flow) trong quy trình nghiệp vụ bằng sơ đồ hoạt động Mermaid flowchart, làm rõ các quyết định logic rẽ nhánh và các tác vụ có thể thực hiện song song.
 

@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /brainstorm — Phỏng vấn Làm rõ Nghiệp vụ Thô 🌟 [CORE WORKFLOW]
+# /brainstorm — Phỏng vấn Làm rõ Nghiệp vụ Thô [CORE WORKFLOW]
 
 Khởi động quy trình thu thập và tinh chế yêu cầu bằng kỹ thuật phỏng vấn phản biện Socratic (Socratic Interviewing), giúp chuyển hóa ý tưởng sơ khởi còn nhiều khoảng trống thành một phạm vi nghiệp vụ sắc nét và khả thi.
 

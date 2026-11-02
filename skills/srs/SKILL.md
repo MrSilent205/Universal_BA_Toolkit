@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /srs — Đặc tả Kỹ thuật Hệ thống (SRS Master) 🌟 [CORE WORKFLOW]
+# /srs — Đặc tả Kỹ thuật Hệ thống (SRS Master) [CORE WORKFLOW]
 
 Tạo lập tài liệu SRS hoàn chỉnh đạt tiêu chuẩn quốc tế IEEE 830 / ISO/IEC/IEEE 29148, đóng vai trò là "bản khế ước kỹ thuật tối cao" (Source of Truth) giữa Business Analyst, Khách hàng, Đội ngũ Lập trình và Đội ngũ Kiểm thử.
 
@@ -52,7 +52,9 @@ Tạo lập tài liệu SRS hoàn chỉnh đạt tiêu chuẩn quốc tế IEEE 
      - *Output*: Kết quả trả về cho client (dữ liệu, thông báo thành công hoặc mã lỗi).
 3. **Xây dựng Quy tắc Nghiệp vụ Chặt chẽ (Business Rules - Section 3.2)**:
    - Gán mã định danh `BR-[DOMAIN]-[SEQ]` theo Rule 02.
-   - Phát biểu bằng cấu trúc mệnh đề điều kiện chuẩn mực: `KHI (WHEN)` $ightarrow$ `THÌ (THEN)` $ightarrow$ `NGOẠI LỆ (UNLESS)`.
+   - Phát biểu bằng cấu trúc mệnh đề điều kiện chuẩn mực: `KHI (WHEN)` $
+ightarrow$ `THÌ (THEN)` $
+ightarrow$ `NGOẠI LỆ (UNLESS)`.
 4. **Xây dựng Ma trận Lỗi Hợp nhất (Consolidated Error Matrix - Section 3.3)**:
    - Gán mã lỗi chuẩn `ERR-[MODULE]-[HTTP_STATUS]-[SEQ]` theo Rule 03 và Rule 11.
    - Hoàn thành đầy đủ bảng 7 cột: Error Code, HTTP Status, Trigger Condition, Localization Key, UI Display Message, Severity, Next Action.

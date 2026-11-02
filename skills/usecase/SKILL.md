@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /usecase — Đặc tả Use Case Chi tiết Chuẩn Alistair Cockburn 🌟 [CORE WORKFLOW]
+# /usecase — Đặc tả Use Case Chi tiết Chuẩn Alistair Cockburn [CORE WORKFLOW]
 
 Đặc tả các ca sử dụng ở mức độ chi tiết cao (Fully Dressed Use Case) tuân thủ cấu trúc của Alistair Cockburn, làm rõ từng tương tác giữa Actor và Hệ thống, phủ kín mọi luồng rẽ nhánh và các tình huống ngoại lệ.
 

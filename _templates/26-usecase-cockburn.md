@@ -14,7 +14,7 @@ last_updated: [YYYY-MM-DD]
 ## 1. Thông tin Nhận diện Ca sử dụng
 - **Use Case ID**: `UC-[MODULE]-[SEQ]` (vd: `UC-ORD-001`)
 - **Tên Use Case**: [Động từ] + [Tân ngữ] (vd: `Thanh toán Đơn hàng qua Cổng VNPay`)
-- **Mức độ Mục tiêu (Goal Level)**: 🌊 **Sea Level** (Mục tiêu người dùng mang lại giá trị trọn vẹn)
+- **Mức độ Mục tiêu (Goal Level)**: **User-Goal Level (Sea Level)** (Mục tiêu người dùng mang lại giá trị trọn vẹn)
 - **Tác nhân chính (Primary Actor)**: Khách hàng mua sắm (Registered User / Guest)
 - **Các bên quan tâm & Quyền lợi (Stakeholders & Interests)**:
   - *Khách hàng*: Muốn thanh toán nhanh chóng, an toàn, được trừ đúng số tiền.

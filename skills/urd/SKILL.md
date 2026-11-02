@@ -38,7 +38,11 @@ metadata:
 1. **Xây dựng Chân dung Người dùng Chi tiết (User Personas)**:
    - Xác định bối cảnh làm việc, mục tiêu (Goals), nỗi đau (Frustrations) và mức độ am hiểu công nghệ của từng nhóm người dùng theo Rule 17.
 2. **Lập Bản đồ Hành trình Người dùng (User Journey Map)**:
-   - Mô phỏng hành trình trải nghiệm qua 5 giai đoạn: Nhận biết (Awareness) $ightarrow$ Cân nhắc (Consideration) $ightarrow$ Thao tác (Action) $ightarrow$ Nhận giá trị (Value Achievement) $ightarrow$ Giữ chân (Retention).
+   - Mô phỏng hành trình trải nghiệm qua 5 giai đoạn: Nhận biết (Awareness) $
+ightarrow$ Cân nhắc (Consideration) $
+ightarrow$ Thao tác (Action) $
+ightarrow$ Nhận giá trị (Value Achievement) $
+ightarrow$ Giữ chân (Retention).
    - Xác định rõ hành động (Touchpoints), cảm xúc người dùng và các điểm tắc nghẽn (Drop-off points) tại mỗi chặng.
 3. **Phân rã Danh mục Nhu cầu Người dùng (User Needs Catalog)**:
    - Đánh mã phân cấp `UN-[MODULE]-[SEQ]` (ví dụ: `UN-AUTH-001`: Người dùng muốn đăng nhập bằng vân tay/FaceID thay vì nhớ mật khẩu phức tạp).

@@ -59,5 +59,7 @@ Phác họa cấu trúc bố cục màn hình (Layout Wireframe) bằng các kh�
 ## Tiêu chí Nghiệm thu (Quality Checklist)
 - [ ] Bố cục khung ASCII vuông vắn, không bị lệch thụt dòng khi hiển thị trên font monospace.
 - [ ] Sử dụng đúng quy ước ký tự chuẩn cho input `[...]`, button `[===]`, radio `(o)`, checkbox `[x]`.
-- [ ] Thể hiện rõ thứ tự phân cấp thông tin từ trên xuống dưới (Header $ightarrow$ Content $ightarrow$ Action CTA).
+- [ ] Thể hiện rõ thứ tự phân cấp thông tin từ trên xuống dưới (Header $
+ightarrow$ Content $
+ightarrow$ Action CTA).
 - [ ] Kèm theo bảng chú thích hành vi (Footnotes) cho các tương tác người dùng.

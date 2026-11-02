@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /ac — Tiêu chí Nghiệm thu Chuẩn Gherkin BDD 🌟 [CORE WORKFLOW]
+# /ac — Tiêu chí Nghiệm thu Chuẩn Gherkin BDD [CORE WORKFLOW]
 
 Xây dựng bộ tiêu chí chấp nhận (Acceptance Criteria) chuẩn hóa dưới dạng kịch bản hành vi BDD (Behavior-Driven Development) cú pháp Gherkin, tạo thành cây cầu kết nối hoàn hảo giữa yêu cầu nghiệp vụ của BA, mã nguồn của Dev và kịch bản tự động hóa của QA.
 

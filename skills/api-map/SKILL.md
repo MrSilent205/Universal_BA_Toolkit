@@ -41,19 +41,25 @@ Xây dựng ma trận ánh xạ dữ liệu toàn diện giữa cấu trúc dữ
      2. `External Field (Đối tác)`: Tên trường từ API bên thứ ba.
      3. `Internal DTO Field`: Tên trường trong hệ thống backend nội bộ (CamelCase).
      4. `DB Column`: Tên cột trong Database (Snake_case).
-     5. `Data Type (Src -> Dst)`: Kiểu dữ liệu nguồn $ightarrow$ Kiểu dữ liệu đích.
+     5. `Data Type (Src -> Dst)`: Kiểu dữ liệu nguồn $
+ightarrow$ Kiểu dữ liệu đích.
      6. `Required / Nullable`: Bắt buộc hay tùy chọn.
      7. `Transformation Logic`: Công thức hoặc quy tắc chuyển đổi giá trị.
      8. `Default Value`: Giá trị mặc định nếu phía đối tác trả về null/rỗng.
 2. **Quy tắc Chuyển đổi Các Trường Nhạy cảm Thường gặp (Transformation Rules)**:
-   - *Tiền tệ*: `vnp_Amount / 100 -> amount` (Ví dụ 10,000,000 xu $ightarrow$ 100,000 VNĐ).
+   - *Tiền tệ*: `vnp_Amount / 100 -> amount` (Ví dụ 10,000,000 xu $
+ightarrow$ 100,000 VNĐ).
    - *Thời gian*: Chuyển đổi chuỗi định dạng lạ `YYYYMMDDHHmmss` (ví dụ: `20261102143000`) sang chuẩn ISO 8601 UTC `2026-11-02T07:30:00Z`.
    - *Trạng thái (Enum Mapping)*:
-     - Đối tác `00` $ightarrow$ Nội bộ `TRANSACTION_SUCCESS`.
-     - Đối tác `07`, `09` $ightarrow$ Nội bộ `TRANSACTION_FAILED_INSUFFICIENT_FUNDS`.
-     - Mọi mã khác $ightarrow$ Nội bộ `TRANSACTION_FAILED_UNKNOWN`.
+     - Đối tác `00` $
+ightarrow$ Nội bộ `TRANSACTION_SUCCESS`.
+     - Đối tác `07`, `09` $
+ightarrow$ Nội bộ `TRANSACTION_FAILED_INSUFFICIENT_FUNDS`.
+     - Mọi mã khác $
+ightarrow$ Nội bộ `TRANSACTION_FAILED_UNKNOWN`.
    - *Họ tên*: Tách chuỗi `fullName` thành `firstName` và `lastName` hoặc ngược lại.
-   - *Số điện thoại*: Chuẩn hóa về định dạng E.164 (`0912345678` $ightarrow$ `+84912345678`).
+   - *Số điện thoại*: Chuẩn hóa về định dạng E.164 (`0912345678` $
+ightarrow$ `+84912345678`).
 3. **Xử lý Dữ liệu Mồ côi & Giá trị Bất thường (Orphan & Edge Value Handling)**:
    - Quy định rõ hành vi khi đối tác trả về trường mới chưa có trong mapping (Bỏ qua hay lưu vào cột `raw_metadata jsonb`).
 4. **Ghi tệp**:

@@ -37,25 +37,38 @@ Xây dựng bộ checklist kiểm tra chuyên sâu dành cho QA và Developers t
 
 ## Quy trình thực thi chi tiết
 1. **Nhóm 1: Xác thực & Phân quyền (Authentication & Authorization)**:
-   - [ ] Kiểm tra khi thiếu Header `Authorization` $ightarrow$ Trả về đúng `401 Unauthorized`.
-   - [ ] Kiểm tra Token sai chữ ký hoặc bị sửa đổi $ightarrow$ Trả về `401 Unauthorized`.
-   - [ ] Kiểm tra Token đã hết hạn $ightarrow$ Trả về `401 Unauthorized` kèm mã `ERR-AUTH-401-01`.
-   - [ ] Kiểm tra User A truy cập tài nguyên của User B (lỗ hổng IDOR) $ightarrow$ Trả về đúng `403 Forbidden`.
+   - [ ] Kiểm tra khi thiếu Header `Authorization` $
+ightarrow$ Trả về đúng `401 Unauthorized`.
+   - [ ] Kiểm tra Token sai chữ ký hoặc bị sửa đổi $
+ightarrow$ Trả về `401 Unauthorized`.
+   - [ ] Kiểm tra Token đã hết hạn $
+ightarrow$ Trả về `401 Unauthorized` kèm mã `ERR-AUTH-401-01`.
+   - [ ] Kiểm tra User A truy cập tài nguyên của User B (lỗ hổng IDOR) $
+ightarrow$ Trả về đúng `403 Forbidden`.
 2. **Nhóm 2: Kiểm tra Ràng buộc Dữ liệu Đầu vào (Payload Validation)**:
-   - [ ] Gửi body rỗng `{}` $ightarrow$ Báo lỗi `422 Unprocessable Entity` chỉ rõ các trường thiếu.
-   - [ ] Gửi kiểu dữ liệu sai (string vào trường int, string vào boolean) $ightarrow$ Báo `422`.
-   - [ ] Gửi chuỗi vượt quá độ dài tối đa (ví dụ string 10.000 ký tự) $ightarrow$ Chặn an toàn, không bị tràn bộ nhớ.
-   - [ ] Thử nghiệm chèn SQL Injection và XSS Payload $ightarrow$ Sanitized an toàn.
+   - [ ] Gửi body rỗng `{}` $
+ightarrow$ Báo lỗi `422 Unprocessable Entity` chỉ rõ các trường thiếu.
+   - [ ] Gửi kiểu dữ liệu sai (string vào trường int, string vào boolean) $
+ightarrow$ Báo `422`.
+   - [ ] Gửi chuỗi vượt quá độ dài tối đa (ví dụ string 10.000 ký tự) $
+ightarrow$ Chặn an toàn, không bị tràn bộ nhớ.
+   - [ ] Thử nghiệm chèn SQL Injection và XSS Payload $
+ightarrow$ Sanitized an toàn.
 3. **Nhóm 3: Tính Bất biến & Chống Trùng lặp (Idempotency & Concurrency)**:
-   - [ ] Gửi 2 request thanh toán đồng thời (trong cùng 1 millisecond) với cùng `Idempotency-Key` $ightarrow$ Chỉ xử lý duy nhất 1 giao dịch, request thứ 2 trả về 409 hoặc kết quả cache.
-   - [ ] Gửi lại request đã thành công với cùng key $ightarrow$ Trả về đúng kết quả cũ, không tạo đơn mới.
+   - [ ] Gửi 2 request thanh toán đồng thời (trong cùng 1 millisecond) với cùng `Idempotency-Key` $
+ightarrow$ Chỉ xử lý duy nhất 1 giao dịch, request thứ 2 trả về 409 hoặc kết quả cache.
+   - [ ] Gửi lại request đã thành công với cùng key $
+ightarrow$ Trả về đúng kết quả cũ, không tạo đơn mới.
 4. **Nhóm 4: Giới hạn Tải & Phân trang (Rate Limiting & Pagination)**:
-   - [ ] Bắn spam 100 requests liên tục $ightarrow$ Kích hoạt Rate Limit, trả về đúng `429 Too Many Requests` kèm header `Retry-After`.
+   - [ ] Bắn spam 100 requests liên tục $
+ightarrow$ Kích hoạt Rate Limit, trả về đúng `429 Too Many Requests` kèm header `Retry-After`.
    - [ ] Kiểm tra phân trang: Query `page=1&limit=20` trả về đúng 20 bản ghi kèm object `meta` chứa `total`, `page`, `limit`.
-   - [ ] Query `limit=100000` $ightarrow$ Hệ thống tự động giới hạn về max limit an toàn (ví dụ 100).
+   - [ ] Query `limit=100000` $
+ightarrow$ Hệ thống tự động giới hạn về max limit an toàn (ví dụ 100).
 5. **Nhóm 5: Cơ chế Webhook & Khả năng Phục hồi (Webhook & Resilience)**:
    - [ ] Kiểm tra tính hợp lệ của chữ ký Webhook HMAC trước khi xử lý.
-   - [ ] Giả lập endpoint Webhook phản hồi 500 $ightarrow$ Server có kích hoạt cơ chế retry theo đúng Exponential Backoff không?
+   - [ ] Giả lập endpoint Webhook phản hồi 500 $
+ightarrow$ Server có kích hoạt cơ chế retry theo đúng Exponential Backoff không?
 6. **Ghi tệp**:
    - Sử dụng template `_templates/39-api-checklist.md` và lưu vào `docs/{feature}/api/test-checklist.md`.
 

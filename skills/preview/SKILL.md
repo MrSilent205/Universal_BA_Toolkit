@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /preview — Cổng Duyệt Hồ sơ Tài liệu Tương tác Một Chạm (preview.html) 🌟 [CORE WORKFLOW]
+# /preview — Cổng Duyệt Hồ sơ Tài liệu Tương tác Một Chạm (preview.html) [CORE WORKFLOW]
 
 Đóng gói và biên dịch toàn bộ kho tài liệu Markdown của một tính năng thành một trang web duy nhất (`preview.html`) với giao diện cổng thông tin (Documentation Portal) hiện đại, tích hợp thanh điều hướng bên trái, hỗ trợ tìm kiếm nhanh, hiển thị trực quan các sơ đồ đồ họa và mở được ngay trên trình duyệt mà không cần cài server.
 
@@ -37,11 +37,11 @@ metadata:
 ## Quy trình thực thi chi tiết
 1. **Quét & Tổ chức Cấu trúc Cây Thư mục (Document Tree Scanning)**:
    - Quét toàn bộ các tệp tài liệu trong `docs/{feature}/`, nhóm thành các mục điều hướng logic:
-     - 📌 *Tổng quan*: PRD, Roadmap, Discovery.
-     - 📋 *Đặc tả*: SRS Master, Business Rules, Error Matrix.
-     - 📊 *Sơ đồ*: Sequence, Activity, State, ERD.
-     - 🖥️ *Giao diện*: Wireframes, User Flow, Prototypes.
-     - 🧪 *Kiểm thử*: Acceptance Criteria, Test Cases, RTM.
+     - *Tổng quan*: PRD, Roadmap, Discovery.
+     - *Đặc tả*: SRS Master, Business Rules, Error Matrix.
+     - *Sơ đồ*: Sequence, Activity, State, ERD.
+     - *Giao diện*: Wireframes, User Flow, Prototypes.
+     - *Kiểm thử*: Acceptance Criteria, Test Cases, RTM.
 2. **Dựng Khung Giao diện Cổng Thông tin (Portal Layout Architecture)**:
    - **Thanh bên trái (Sidebar Navigation)**: Logo dự án, phiên bản, ô tìm kiếm nhanh và danh mục cây trang có highlight trang đang đọc.
    - **Khu vực trung tâm (Main Content Pane)**: Hiển thị nội dung tài liệu Markdown đã được biên dịch sang HTML chuẩn, typography sắc nét, bảng biểu có đường kẻ rõ ràng, code block có highlight cú pháp.

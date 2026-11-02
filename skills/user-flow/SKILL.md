@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /user-flow — Phân tích Luồng Người dùng & Chuyển dịch Màn hình 🌟 [CORE WORKFLOW]
+# /user-flow — Phân tích Luồng Người dùng & Chuyển dịch Màn hình [CORE WORKFLOW]
 
 Mô hình hóa đường đi trực quan của người dùng (User Navigation Flow) qua từng giao diện màn hình từ lúc bắt đầu cho đến khi hoàn thành mục tiêu, làm rõ các hành động kích hoạt chuyển trang, các điểm rẽ nhánh và 5 trạng thái thiết yếu của mỗi màn hình.
 

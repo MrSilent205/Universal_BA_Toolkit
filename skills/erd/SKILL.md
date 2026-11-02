@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /erd — Sơ đồ Quan hệ Thực thể Dữ liệu (Mermaid ERD) 🌟 [CORE WORKFLOW]
+# /erd — Sơ đồ Quan hệ Thực thể Dữ liệu (Mermaid ERD) [CORE WORKFLOW]
 
 Mô hình hóa cấu trúc dữ liệu quan hệ ở mức logic và vật lý bằng cú pháp Mermaid `erDiagram`, định nghĩa rõ các thuộc tính, kiểu dữ liệu chuẩn, ràng buộc khóa chính/khóa ngoại và bản số quan hệ (Cardinality) giữa các thực thể trong hệ thống.
 

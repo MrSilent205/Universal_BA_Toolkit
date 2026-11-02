@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /state — Sơ đồ & Ma trận Trạng thái Thực thể (FSM) 🌟 [CORE WORKFLOW]
+# /state — Sơ đồ & Ma trận Trạng thái Thực thể (FSM) [CORE WORKFLOW]
 
 Mô hình hóa toàn diện vòng đời (Lifecycle) của các thực thể nghiệp vụ trọng yếu (Đơn hàng, Giao dịch thanh toán, Hợp đồng, Vé hỗ trợ, Tài khoản người dùng) bằng máy trạng thái hữu hạn FSM, ngăn chặn triệt để lỗi chuyển dịch trạng thái sai quy tắc.
 

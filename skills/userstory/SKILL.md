@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /userstory — Bóc tách Backlog User Story Chuẩn INVEST 🌟 [CORE WORKFLOW]
+# /userstory — Bóc tách Backlog User Story Chuẩn INVEST [CORE WORKFLOW]
 
 Chuyển hóa các yêu cầu kỹ thuật và ca sử dụng phức tạp thành danh mục User Story hướng giá trị người dùng theo đúng nguyên tắc INVEST của Agile Scrum, sẵn sàng đưa vào Sprint Planning và quản lý trên Jira.
 
@@ -58,7 +58,8 @@ Chuyển hóa các yêu cầu kỹ thuật và ca sử dụng phức tạp thàn
    - **S - Small**: Có đủ nhỏ để xong trong 1 sprint (1-5 Story Points) không?
    - **T - Testable**: Có tiêu chí nghiệm thu rõ ràng để QA test không?
 5. **Ước tính Story Points & Định nghĩa Definition of Done (DoD)**:
-   - Ước tính Fibonacci (1, 2, 3, 5, 8). Nếu quá 8 điểm $ightarrow$ Bắt buộc phải chẻ nhỏ tiếp.
+   - Ước tính Fibonacci (1, 2, 3, 5, 8). Nếu quá 8 điểm $
+ightarrow$ Bắt buộc phải chẻ nhỏ tiếp.
    - Thiết lập DoD: Code review approved, Unit test >= 80%, Pass AC kịch bản.
 6. **Ghi tệp & Xuất bản**:
    - Sử dụng template `_templates/27-userstory.md` và lưu vào `docs/{feature}/userstories/backlog.md`.

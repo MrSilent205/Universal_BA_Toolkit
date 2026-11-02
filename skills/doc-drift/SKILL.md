@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /doc-drift — Kiểm tra Lệch pha Giữa Đặc tả và Mã nguồn (Doc Drift) 🌟 [CORE WORKFLOW]
+# /doc-drift — Kiểm tra Lệch pha Giữa Đặc tả và Mã nguồn (Doc Drift) [CORE WORKFLOW]
 
 Quét đối chiếu song song giữa tài liệu đặc tả nghiệp vụ (SRS, User Stories, API Specs) và mã nguồn thực tế của lập trình viên (Controllers, Models, Validations), phát hiện các điểm "lệch pha" (Drift) nguy hiểm phát sinh trong quá trình code.
 
@@ -43,8 +43,10 @@ Quét đối chiếu song song giữa tài liệu đặc tả nghiệp vụ (SRS
      - Tính năng có trong code nhưng tài liệu KHÔNG HỀ CÓ (Phantom / Shadow Feature — Dev tự chế).
 2. **Đối chiếu Ràng buộc Nghiệp vụ (Business Rule & Validation Drift)**:
    - Đọc các câu lệnh validate và `if / else` trong code:
-     - *Lỏng hơn đặc tả*: SRS yêu cầu mật khẩu tối thiểu 8 ký tự có ký tự đặc biệt, nhưng code chỉ check `length >= 6` $ightarrow$ Lỗ hổng bảo mật.
-     - *Chặt hơn đặc tả*: SRS cho phép đặt tối đa 10 sản phẩm, code chặn ở mức 5 sản phẩm $ightarrow$ Khách hàng không mua được hàng.
+     - *Lỏng hơn đặc tả*: SRS yêu cầu mật khẩu tối thiểu 8 ký tự có ký tự đặc biệt, nhưng code chỉ check `length >= 6` $
+ightarrow$ Lỗ hổng bảo mật.
+     - *Chặt hơn đặc tả*: SRS cho phép đặt tối đa 10 sản phẩm, code chặn ở mức 5 sản phẩm $
+ightarrow$ Khách hàng không mua được hàng.
 3. **Đối chiếu Mã Lỗi & Thông báo Người dùng (Error Response Drift)**:
    - Đối chiếu danh sách `throw new Exception` trong code với Ma trận Lỗi (`ERR-xxx`):
      - Phát hiện các mã lỗi "tự chế" chưa được định nghĩa trong tài liệu SRS.

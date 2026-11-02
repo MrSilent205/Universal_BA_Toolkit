@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /sequence — Sơ đồ Tuần tự Tương tác Hệ thống 🌟 [CORE WORKFLOW]
+# /sequence — Sơ đồ Tuần tự Tương tác Hệ thống [CORE WORKFLOW]
 
 Mô hình hóa chuỗi trao đổi thông điệp tuần tự theo thời gian giữa các tác nhân (Actors) và các thành phần kỹ thuật (Frontend, API Gateway, Microservices, Database, Third-party APIs), làm rõ cách thức phối hợp để hoàn thành một ca sử dụng hoặc luồng nghiệp vụ.
 
@@ -37,7 +37,11 @@ Mô hình hóa chuỗi trao đổi thông điệp tuần tự theo thời gian g
 
 ## Quy trình thực thi chi tiết
 1. **Xác định Thứ tự Các bên tham gia (Participant Ordering)**:
-   - Sắp xếp logic từ trái sang phải: Actor (Người dùng) $ightarrow$ Client (Web/Mobile App) $ightarrow$ API Gateway / Backend Service $ightarrow$ Database $ightarrow$ Dịch vụ thứ ba (Payment Gateway, SMS, Email).
+   - Sắp xếp logic từ trái sang phải: Actor (Người dùng) $
+ightarrow$ Client (Web/Mobile App) $
+ightarrow$ API Gateway / Backend Service $
+ightarrow$ Database $
+ightarrow$ Dịch vụ thứ ba (Payment Gateway, SMS, Email).
    - Đặt tên alias ngắn gọn, dễ đọc (ví dụ: `actor U as User`, `participant FE as Web App`, `participant BE as Core API`).
 2. **Khai báo cú pháp Mermaid chuẩn mực**:
    - Luôn bật `autonumber` ở đầu block để đánh số thứ tự từng bước tương tác.

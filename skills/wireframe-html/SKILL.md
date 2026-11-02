@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /wireframe-html — Wireframe HTML Đơn sắc Tương tác Nguyên khối 🌟 [CORE WORKFLOW]
+# /wireframe-html — Wireframe HTML Đơn sắc Tương tác Nguyên khối [CORE WORKFLOW]
 
 Tạo tệp giao diện HTML nguyên khối (Single-file HTML) chuẩn Grayscale, tự chứa toàn bộ CSS và JavaScript nội tuyến, có thể double-click mở xem trực tiếp trên mọi trình duyệt mà hoàn toàn không cần internet, server hay tiện ích mở rộng.
 
@@ -53,9 +53,13 @@ Tạo tệp giao diện HTML nguyên khối (Single-file HTML) chuẩn Grayscale
    - Áp dụng CSS Flexbox / CSS Grid chuẩn responsive (tương thích cả Mobile 375px và Desktop 1280px).
 4. **Cài đặt Tương tác Giả lập (Interactive Mock Behaviors)**:
    - Viết Vanilla JavaScript nội tuyến mô phỏng các hành vi thực tế:
-     - *Validation Form*: Khi bấm Submit để trống $ightarrow$ viền đỏ các ô lỗi, hiển thị inline message kèm mã lỗi `ERR-xxx`.
-     - *Thành công*: Khi điền đúng $ightarrow$ ẩn form, hiển thị thông báo thành công xanh lá hoặc modal xác nhận.
-     - *Toggle Modal*: Bấm nút "Xem điều khoản" $ightarrow$ mở modal popup, bấm "Đóng" hoặc click ngoài overlay $ightarrow$ tắt modal.
+     - *Validation Form*: Khi bấm Submit để trống $
+ightarrow$ viền đỏ các ô lỗi, hiển thị inline message kèm mã lỗi `ERR-xxx`.
+     - *Thành công*: Khi điền đúng $
+ightarrow$ ẩn form, hiển thị thông báo thành công xanh lá hoặc modal xác nhận.
+     - *Toggle Modal*: Bấm nút "Xem điều khoản" $
+ightarrow$ mở modal popup, bấm "Đóng" hoặc click ngoài overlay $
+ightarrow$ tắt modal.
      - *Tabs / Accordion*: Chuyển đổi qua lại giữa các phương thức thanh toán mượt mà.
 5. **Ghi tệp & Kiểm định**:
    - Lưu file vào `docs/{feature}/html-wireframe/{screen_name}.html`.

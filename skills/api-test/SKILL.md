@@ -83,8 +83,10 @@ Khởi tạo bộ sưu tập kiểm thử API mã nguồn mở dạng tệp thu�
      }
      ```
 5. **Tạo Chuỗi Kịch bản Kiểm thử Toàn trình (Chained Workflow)**:
-   - Sequence 1: Đăng nhập lấy Bearer Token $ightarrow$ Tự động lưu `jwtToken`.
-   - Sequence 2: Tạo đơn hàng mới $ightarrow$ Lưu `testOrderId`.
+   - Sequence 1: Đăng nhập lấy Bearer Token $
+ightarrow$ Tự động lưu `jwtToken`.
+   - Sequence 2: Tạo đơn hàng mới $
+ightarrow$ Lưu `testOrderId`.
    - Sequence 3: Gọi API Thanh toán đơn hàng với `testOrderId`.
    - Sequence 4: Tra cứu trạng thái đơn hàng xác nhận `status === "PAID"`.
 6. **Ghi tệp**:

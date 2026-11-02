@@ -13,7 +13,11 @@ metadata:
 Mô hình hóa quy trình hoạt động nghiệp vụ đa tác nhân theo định dạng phân làn (Swimlane), phân định ranh giới trách nhiệm rõ ràng giữa các vai trò người dùng, các phòng ban nghiệp vụ và các dịch vụ tự động của hệ thống.
 
 ## Mục tiêu & Bối cảnh
-- **Bối cảnh sử dụng**: Sử dụng khi quy trình nghiệp vụ yêu cầu sự phối hợp liên phòng ban hoặc tương tác chéo giữa nhiều vai trò khác nhau (ví dụ: Khách đặt hàng $ightarrow$ Cổng thanh toán trừ tiền $ightarrow$ Kế toán xuất hóa đơn $ightarrow$ Thủ kho soạn hàng $ightarrow$ Shipper giao hàng).
+- **Bối cảnh sử dụng**: Sử dụng khi quy trình nghiệp vụ yêu cầu sự phối hợp liên phòng ban hoặc tương tác chéo giữa nhiều vai trò khác nhau (ví dụ: Khách đặt hàng $
+ightarrow$ Cổng thanh toán trừ tiền $
+ightarrow$ Kế toán xuất hóa đơn $
+ightarrow$ Thủ kho soạn hàng $
+ightarrow$ Shipper giao hàng).
 - **Đối tượng thụ hưởng**: Trưởng phòng ban vận hành, Business Analyst, QA Lead, Đội ngũ triển khai hệ thống.
 - **Giá trị cốt lõi**: Chấm dứt tình trạng "cha chung không ai khóc" trong quy trình vận hành; chỉ ra chính xác điểm bàn giao trách nhiệm (Handoff Points) giữa các bên, ngăn ngừa thất thoát dữ liệu và chậm trễ tiến độ.
 

@@ -42,9 +42,11 @@ Quét và phân tích các phản hồi, ghi chú đánh giá (Comments / Review
 3. **Thực hiện Cập nhật Ngược (Reverse Patching)**:
    - Áp dụng các thay đổi vào file Markdown gốc:
      - Sửa đổi nội dung quy tắc hoặc tiêu chí nghiệm thu.
-     - Nếu phát sinh yêu cầu thay đổi lớn (Scope change) $ightarrow$ Tự động chuyển tiếp thông báo kích hoạt lệnh `/cr`.
+     - Nếu phát sinh yêu cầu thay đổi lớn (Scope change) $
+ightarrow$ Tự động chuyển tiếp thông báo kích hoạt lệnh `/cr`.
 4. **Tăng Phiên bản & Ghi Lịch sử Sửa đổi**:
-   - Tự động nâng phiên bản PATCH (`v1.0.0` $ightarrow$ `v1.0.1`) theo Rule 19.
+   - Tự động nâng phiên bản PATCH (`v1.0.0` $
+ightarrow$ `v1.0.1`) theo Rule 19.
    - Thêm một dòng vào bảng Revision History: "Đồng bộ phản hồi phê duyệt của khách hàng từ preview.html".
 5. **Thông báo Báo cáo Tổng kết**:
    - Hiển thị bảng tóm tắt danh sách các file đã được đồng bộ thành công.

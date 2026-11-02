@@ -8,7 +8,7 @@ metadata:
   is_core: true
 ---
 
-# /api-design — Thiết kế Kiến trúc Tích hợp Hệ thống qua API 🌟 [CORE WORKFLOW]
+# /api-design — Thiết kế Kiến trúc Tích hợp Hệ thống qua API [CORE WORKFLOW]
 
 Thiết kế bản vẽ kiến trúc kết nối và giao tiếp dữ liệu giữa các phân hệ hoặc hệ thống đối tác bên ngoài, chuẩn hóa các giao thức bảo mật cao cấp (HMAC Signature, Idempotency), quy chuẩn Webhook callback và cơ chế chống nghẽn mạng.
 
@@ -41,7 +41,9 @@ Thiết kế bản vẽ kiến trúc kết nối và giao tiếp dữ liệu gi�
    - Ngăn chặn Replay Attack: Từ chối các request có `abs(now() - Timestamp) > 300` giây hoặc Nonce đã tồn tại trong Redis.
 2. **Cơ chế Chống Trùng lặp Giao dịch (Idempotency Key Pattern)**:
    - Client bắt buộc gửi header `X-Idempotency-Key: <UUID_v4>` cho mọi thao tác ghi/thanh toán.
-   - Server lưu key vào Redis với TTL = 24 giờ. Nếu nhận cùng key trong khi đang xử lý $ightarrow$ trả về HTTP 409 Conflict; nếu đã xử lý xong $ightarrow$ trả về kết quả đã cache mà không thực hiện lại logic.
+   - Server lưu key vào Redis với TTL = 24 giờ. Nếu nhận cùng key trong khi đang xử lý $
+ightarrow$ trả về HTTP 409 Conflict; nếu đã xử lý xong $
+ightarrow$ trả về kết quả đã cache mà không thực hiện lại logic.
 3. **Quy chuẩn Thiết kế Webhook / IPN (Instant Payment Notification)**:
    - Server gọi ngược (Callback) về URL đối tác khi có sự kiện: `POST https://partner.com/webhook/orders`.
    - Body chứa event type: `order.paid`, `order.cancelled`, `refund.completed`.
@@ -53,7 +55,8 @@ Thiết kế bản vẽ kiến trúc kết nối và giao tiếp dữ liệu gi�
      - Lần 3: Sau 30 phút
      - Lần 4: Sau 2 giờ
      - Lần 5: Sau 24 giờ
-   - Sau 5 lần thất bại $ightarrow$ Đẩy vào Dead Letter Queue (DLQ) và gửi cảnh báo CSKH xử lý thủ công.
+   - Sau 5 lần thất bại $
+ightarrow$ Đẩy vào Dead Letter Queue (DLQ) và gửi cảnh báo CSKH xử lý thủ công.
 5. **Ghi tệp**:
    - Sử dụng template `_templates/37-api-design.md` và lưu vào `docs/{feature}/api/integration-design.md`.
 
