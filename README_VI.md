@@ -1,9 +1,4 @@
-# Universal BA Toolkit (BA-Kit Open) — 56 Kỹ Năng Cho IT Business Analyst & Product Owner
-
-[![Ngôn ngữ: Tiếng Việt](https://img.shields.io/badge/Ng%C3%B4n%20ng%E1%BB%AF-Ti%E1%BA%BFng%20Vi%E1%BB%87t-red.svg)](README_VI.md)
-[![Ngôn ngữ: Tiếng Anh](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
-[![Giấy phép: MIT](https://img.shields.io/badge/Gi%E1%BA%A5y%20ph%C3%A9p-MIT-green.svg)](LICENSE)
-[![Tiêu chuẩn: Agent Skills](https://img.shields.io/badge/Ti%C3%AAu%20chu%E1%BA%A9n-Agent%20Skills-orange.svg)](https://skills.sh)
+# Universal BA Toolkit  — Bộ kỹ Năng Cho IT Business Analyst & Product Owner áp dụng cho AI Agents
 
 > **Bản tiếng Anh (English Version):** [README.md](README.md)
 
@@ -152,4 +147,4 @@ Chỉ cần sao chép hoặc clone thư mục dự án này vào thư mục gố
 
 ## Đóng Góp & Bản Quyền
 
-Dự án phát hành theo giấy phép mã nguồn mở **[MIT License](LICENSE)**. Mọi đóng góp về biểu mẫu nghiệp vụ chuyên ngành (Fintech, Thương mại điện tử, Y tế, Logistics, ERP) và đề xuất chuẩn hóa đều được trân trọng hoan nghênh.
+Dự án phát hành theo giấy phép mã nguồn mở **[MIT License](LICENSE)**. Mọi đóng góp về biểu mẫu nghiệp vụ chuyên ngành (Fintech, Thương mại điện tử, Y tế, Logistics, ERP).
