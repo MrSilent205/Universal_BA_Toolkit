@@ -1,4 +1,4 @@
-# Universal BA Toolkit (BA-Kit Open) — 56 Skills for IT Business Analysts & Product Owners
+# Universal BA Toolkit — All skills for IT Business Analysts & Product Owners.
 
 [![Language: English](https://img.shields.io/badge/Language-English-blue.svg)](README.md)
 [![Language: Vietnamese](https://img.shields.io/badge/Language-Vietnamese-red.svg)](README_VI.md)
@@ -7,7 +7,7 @@
 
 > **Vietnamese Version:** [README_VI.md](README_VI.md)
 
-**Universal BA Toolkit (BA-Kit Open)** is an open-source, production-ready specification framework composed of **56 specialized Agent Skills**, **19 strict requirements engineering rules**, and **47 standardized deliverables templates**. It equips coding agents (Claude Code, Antigravity, Codex, Cursor, Windsurf) and human analysts with end-to-end capabilities across the entire software specification lifecycle.
+**Universal BA Toolkit ** is an open-source, production-ready specification framework composed of **56 specialized Agent Skills**, **19 strict requirements engineering rules**, and **47 standardized deliverables templates**. It equips coding agents (Claude Code, Antigravity, Codex, Cursor, Windsurf) and human analysts with end-to-end capabilities across the entire software specification lifecycle.
 
 Transform raw ideas and ambiguous business concepts into IEEE 830 technical specifications, editorial-grade architecture diagrams, interactive grayscale wireframes, INVEST-compliant user backlogs, Gherkin BDD test scenarios, traceable test matrices, and rigorous Change Request impact analyses.
 
