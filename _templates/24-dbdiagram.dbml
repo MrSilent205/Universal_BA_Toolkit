@@ -1,0 +1,85 @@
+// Database Markup Language (DBML) Specification
+// Compatible with dbdiagram.io and dbdocs.io
+
+Project OrderManagementSystem {
+  database_type: 'PostgreSQL'
+  Note: 'Hệ thống Quản lý Đơn hàng & Thanh toán Đa kênh'
+}
+
+Enum order_status {
+  DRAFT [note: 'Đang tạo giỏ hàng']
+  PENDING_PAYMENT [note: 'Chờ khách quét mã thanh toán']
+  PAID [note: 'Đã thanh toán thành công']
+  PROCESSING [note: 'Đang soạn hàng']
+  SHIPPING [note: 'Đang giao hàng']
+  COMPLETED [note: 'Giao hàng thành công']
+  CANCELLED [note: 'Đã hủy đơn']
+}
+
+Enum payment_gateway {
+  VNPAY
+  MOMO
+  ZALOPAY
+  COD
+}
+
+Table users {
+  id uuid [pk, default: `gen_random_uuid()`]
+  email varchar(255) [unique, not null]
+  password_hash varchar(255) [not null]
+  full_name varchar(100) [not null]
+  phone varchar(20) [unique]
+  created_at timestamptz [default: `now()`]
+  Note: 'Bảng lưu trữ tài khoản người dùng'
+}
+
+Table orders {
+  id uuid [pk, default: `gen_random_uuid()`]
+  user_id uuid [not null, ref: > users.id]
+  order_number varchar(30) [unique, not null]
+  total_amount decimal(15,2) [not null]
+  discount_amount decimal(15,2) [default: 0]
+  final_amount decimal(15,2) [not null]
+  status order_status [not null, default: 'DRAFT']
+  payment_method payment_gateway [not null]
+  created_at timestamptz [default: `now()`]
+  Note: 'Bảng lưu thông tin đơn hàng'
+}
+
+Table order_items {
+  id uuid [pk, default: `gen_random_uuid()`]
+  order_id uuid [not null, ref: > orders.id]
+  product_id uuid [not null, ref: > products.id]
+  quantity integer [not null, note: 'Số lượng mua >= 1']
+  unit_price decimal(15,2) [not null]
+  subtotal decimal(15,2) [not null]
+}
+
+Table products {
+  id uuid [pk, default: `gen_random_uuid()`]
+  sku varchar(50) [unique, not null]
+  name varchar(255) [not null]
+  price decimal(15,2) [not null]
+  stock_quantity integer [not null, default: 0]
+}
+
+Table payment_transactions {
+  id uuid [pk, default: `gen_random_uuid()`]
+  order_id uuid [not null, ref: > orders.id]
+  transaction_ref varchar(100) [unique, not null]
+  gateway payment_gateway [not null]
+  amount decimal(15,2) [not null]
+  status varchar(50) [not null]
+  paid_at timestamptz
+}
+
+TableGroup sales_core {
+  users
+  orders
+  order_items
+  products
+}
+
+TableGroup finance {
+  payment_transactions
+}

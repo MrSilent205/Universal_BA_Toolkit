@@ -1,0 +1,66 @@
+direction: right
+
+vars: {
+  theme: neutral-light
+}
+
+title: Sơ đồ Quan hệ Dữ liệu Thực thể (D2 ERD) {
+  near: top-center
+  shape: text
+  style.font-size: 24
+}
+
+users: {
+  shape: sql_table
+  id: uuid {constraint: primary_key}
+  email: varchar(255) {constraint: unique}
+  password_hash: varchar(255)
+  full_name: varchar(100)
+  phone: varchar(20) {constraint: unique}
+  status: varchar(50)
+  created_at: timestamptz
+}
+
+orders: {
+  shape: sql_table
+  id: uuid {constraint: primary_key}
+  user_id: uuid {constraint: foreign_key}
+  order_number: varchar(30) {constraint: unique}
+  final_amount: decimal(15,2)
+  status: varchar(50)
+  created_at: timestamptz
+}
+
+order_items: {
+  shape: sql_table
+  id: uuid {constraint: primary_key}
+  order_id: uuid {constraint: foreign_key}
+  product_id: uuid {constraint: foreign_key}
+  quantity: integer
+  unit_price: decimal(15,2)
+}
+
+products: {
+  shape: sql_table
+  id: uuid {constraint: primary_key}
+  sku: varchar(50) {constraint: unique}
+  name: varchar(255)
+  price: decimal(15,2)
+  stock_quantity: integer
+}
+
+payment_transactions: {
+  shape: sql_table
+  id: uuid {constraint: primary_key}
+  order_id: uuid {constraint: foreign_key}
+  gateway: varchar(50)
+  amount: decimal(15,2)
+  status: varchar(50)
+  paid_at: timestamptz
+}
+
+# Relationships
+orders.user_id -> users.id: "n to 1"
+order_items.order_id -> orders.id: "n to 1"
+order_items.product_id -> products.id: "n to 1"
+payment_transactions.order_id -> orders.id: "n to 1"

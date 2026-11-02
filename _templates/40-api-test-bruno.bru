@@ -1,0 +1,45 @@
+meta {
+  name: Tạo đơn hàng mới - Happy Path
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/orders/checkout
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwtToken}}
+}
+
+headers {
+  Content-Type: application/json
+  X-Idempotency-Key: {{idempotencyKey}}
+}
+
+body:json {
+  {
+    "shipping_address_id": "addr_default_01",
+    "payment_method": "VNPAY",
+    "voucher_code": "VNPAY50K"
+  }
+}
+
+tests {
+  test("Mã phản hồi HTTP phải là 201 Created", function() {
+    expect(res.getStatus()).to.equal(201);
+  });
+
+  test("Cấu trúc phản hồi tuân thủ chuẩn Envelope (success = true)", function() {
+    const body = res.getBody();
+    expect(body.success).to.be.true;
+    expect(body.error).to.be.null;
+    expect(body.data.order_id).to.be.a('string');
+    expect(body.data.payment_url).to.include('vnpayment.vn');
+    
+    // Lưu lại order_id để dùng cho request kiểm tra kế tiếp
+    bru.setVar("createdOrderId", body.data.order_id);
+  });
+}

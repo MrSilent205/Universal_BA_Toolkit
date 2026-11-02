@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bản Mẫu Tương Tác Cao (High-Fi HTML Prototype) - E-Commerce App</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-hover: #1D4ED8;
+      --surface: #FFFFFF;
+      --bg: #F8FAFC;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --success: #16A34A;
+      --danger: #DC2626;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body { background: var(--bg); color: var(--text); padding-bottom: 60px; }
+    nav { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; }
+    .brand { font-size: 18px; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    .cart-pill { background: #EEF2FF; color: var(--primary); font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 20px; cursor: pointer; }
+    main { max-width: 800px; margin: 24px auto; padding: 0 16px; }
+    .screen { display: none; }
+    .screen.active { display: block; animation: fadeIn 0.25s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+    h2 { font-size: 18px; margin-bottom: 12px; }
+    .item-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--border); }
+    .btn { background: var(--primary); color: #FFF; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.15s; }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #F1F5F9; color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { background: #E2E8F0; }
+    .toast { position: fixed; bottom: 20px; right: 20px; background: #0F172A; color: #FFF; padding: 12px 20px; border-radius: 8px; font-size: 14px; display: none; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="brand">⚡ Antigravity Shop</div>
+    <div class="cart-pill" onclick="showScreen('cartScreen')">🛒 Giỏ hàng (<span id="cartCount">1</span>)</div>
+  </nav>
+
+  <main>
+    <!-- Screen 1: Giỏ hàng -->
+    <div id="cartScreen" class="screen active">
+      <div class="card">
+        <h2>Giỏ Hàng Của Bạn</h2>
+        <div class="item-row">
+          <div>
+            <strong>Áo Khoác Bomber Techwear</strong>
+            <div style="font-size: 13px; color: var(--text-muted);">Size: XL | Màu: Đen Carbon</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-weight: 700;">850.000 đ</div>
+            <div style="font-size: 12px; color: var(--text-muted);">Số lượng: 1</div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-top: 16px; align-items: center;">
+          <span style="font-size: 15px; font-weight: 600;">Tổng tiền: 850.000 đ</span>
+          <button class="btn" onclick="showScreen('checkoutScreen')">Tiến Hành Đặt Hàng &rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 2: Checkout -->
+    <div id="checkoutScreen" class="screen">
+      <div class="card">
+        <h2>Thông Tin Nhận Hàng & Thanh Toán</h2>
+        <div style="margin-bottom: 14px;">
+          <label style="display:block; font-size: 13px; margin-bottom: 4px; font-weight: 600;">Họ và tên</label>
+          <input type="text" id="custName" value="Nguyễn Văn An" style="width:100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px;">
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="display:block; font-size: 13px; margin-bottom: 4px; font-weight: 600;">Số điện thoại</label>
+          <input type="text" id="custPhone" value="0912345678" style="width:100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px;">
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 20px;">
+          <button class="btn-secondary btn" onclick="showScreen('cartScreen')">&larr; Quay lại</button>
+          <button class="btn" style="flex:1;" onclick="processPayment()">Xác Nhận Thanh Toán 850.000 đ</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 3: Thành công -->
+    <div id="successScreen" class="screen">
+      <div class="card" style="text-align: center; padding: 40px 20px;">
+        <div style="font-size: 48px; margin-bottom: 12px;">🎉</div>
+        <h2>Đặt Hàng Thành Công!</h2>
+        <p style="color: var(--text-muted); margin-bottom: 24px;">Cảm ơn bạn. Đơn hàng <strong id="orderIdText">ORD-8942</strong> đã được chuyển sang bộ phận kho.</p>
+        <button class="btn" onclick="resetApp()">Tiếp Tục Mua Hàng</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast">Đã cập nhật trạng thái đơn hàng!</div>
+
+  <script>
+    function showScreen(screenId) {
+      document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+      document.getElementById(screenId).classList.add('active');
+    }
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 2500);
+    }
+    function processPayment() {
+      const orderId = 'ORD-' + Math.floor(1000 + Math.random() * 9000);
+      document.getElementById('orderIdText').innerText = orderId;
+      showToast('Đang khởi tạo giao dịch...');
+      setTimeout(() => {
+        showScreen('successScreen');
+        document.getElementById('cartCount').innerText = '0';
+      }, 700);
+    }
+    function resetApp() {
+      document.getElementById('cartCount').innerText = '1';
+      showScreen('cartScreen');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+direction: down
+
+vars: {
+  theme: neutral-light
+}
+
+title: Quy trình Xử lý Đơn hàng (D2 Activity Flow) {
+  near: top-center
+  shape: text
+  style.font-size: 20
+}
+
+start: "" {
+  shape: circle
+  style.fill: "#22c55e"
+}
+
+validate_input: "Kiểm tra thông tin giao hàng" {
+  shape: rectangle
+}
+
+is_valid: "Hợp lệ?" {
+  shape: diamond
+}
+
+check_stock: "Kiểm tra tồn kho thực tế" {
+  shape: rectangle
+}
+
+is_stock: "Còn hàng?" {
+  shape: diamond
+}
+
+init_payment: "Khởi tạo cổng thanh toán" {
+  shape: rectangle
+}
+
+order_success: "Đặt hàng thành công" {
+  shape: rectangle
+  style.fill: "#dcfce7"
+}
+
+order_failed: "Hủy đơn hàng" {
+  shape: rectangle
+  style.fill: "#fee2e2"
+}
+
+end_success: "" {
+  shape: double_circle
+  style.fill: "#16a34a"
+}
+
+end_failed: "" {
+  shape: double_circle
+  style.fill: "#dc2626"
+}
+
+# Connections
+start -> validate_input
+validate_input -> is_valid
+
+is_valid -> check_stock: "Đúng"
+is_valid -> order_failed: "Sai (ERR-VAL-422-01)"
+
+check_stock -> is_stock
+is_stock -> init_payment: "Đủ tồn kho"
+is_stock -> order_failed: "Hết hàng (ERR-ORD-409-01)"
+
+init_payment -> order_success: "Thanh toán OK"
+init_payment -> order_failed: "Quá hạn / Hủy"
+
+order_success -> end_success
+order_failed -> end_failed

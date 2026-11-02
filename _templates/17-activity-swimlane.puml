@@ -1,0 +1,68 @@
+@startuml
+title Quy trình Xử lý Đơn hàng Liên phân hệ (Swimlane Activity Diagram)
+
+skinparam conditionStyle inside
+skinparam ActivityFontSize 12
+skinparam ActivityFontName Arial
+skinparam ArrowColor #2D3142
+skinparam ActivityBorderColor #2D3142
+skinparam ActivityBackgroundColor #F8F9FA
+
+|#E3F2FD|Khách hàng|
+start
+:Chọn sản phẩm và bấm "Thanh toán";
+:Điền địa chỉ giao hàng và mã voucher;
+:Bấm nút "Xác nhận đặt hàng";
+
+|#FFF3E0|Hệ thống Frontend / API Gateway|
+:Validate cú pháp dữ liệu đầu vào;
+if (Dữ liệu hợp lệ?) then (Hợp lệ)
+  :Tạo Idempotency Key;
+else (Lỗi định dạng)
+  :Hiển thị lỗi ERR-VAL-422-01;
+  |Khách hàng|
+  :Nhập lại thông tin đúng;
+  detach
+endif
+
+|#E8F5E9|Order Service / Backend|
+:Kiểm tra số lượng tồn kho khả dụng;
+if (Tồn kho đủ?) then (Đủ hàng)
+  :Giữ chỗ tồn kho trong 15 phút;
+  :Áp dụng voucher theo BR-PROMO-001;
+  :Tạo đơn hàng trạng thái PENDING_PAYMENT;
+else (Hết hàng)
+  :Báo lỗi ERR-ORD-409-01;
+  |Khách hàng|
+  :Nhận thông báo cập nhật giỏ hàng;
+  stop
+endif
+
+|#F3E5F5|Cổng Thanh toán Đối tác (VNPay)|
+:Khởi tạo giao dịch và sinh mã QR;
+|Khách hàng|
+:Quét mã QR và xác thực sinh trắc học;
+|Cổng Thanh toán Đối tác (VNPay)|
+:Trừ tiền tài khoản ngân hàng thành công;
+:Gửi Webhook IPN kèm chữ ký HMAC;
+
+|#E8F5E9|Order Service / Backend|
+:Xác thực chữ ký HMAC-SHA256;
+if (Chữ ký hợp lệ?) then (Hợp lệ)
+  :Cập nhật trạng thái đơn thành PAID;
+  :Xác nhận trừ kho vĩnh viễn;
+else (Sai chữ ký)
+  :Ghi log bảo mật ERR-PAY-400-03;
+  :Báo động kỹ thuật;
+  stop
+endif
+
+|#FFFDE7|Bộ phận Vận hành & Kho (WMS)|
+:Nhận lệnh xuất kho tự động;
+:In phiếu đóng gói và dán mã vận đơn;
+:Bàn giao kiện hàng cho đối tác vận chuyển;
+
+|Khách hàng|
+:Nhận thông báo đơn hàng đang giao;
+stop
+@enduml
